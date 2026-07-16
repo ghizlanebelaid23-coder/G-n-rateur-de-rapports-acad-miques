@@ -1,0 +1,37 @@
+{
+    "cover": {
+        "country": "",
+        "university": "",
+        "school": "",
+        "department": "",
+        "document_type": "",
+        "diploma": "",
+        "speciality": "",
+        "reference": "",
+        "title_line1": "",
+        "title_line2": "",
+        "title_line3": "",
+        "student": "",
+        "jury": [],
+        "date": "",
+        "supervisor": [],
+        "year": ""
+    },
+    "dedication": {
+        "to": "",
+        "reason": "",
+        "message": ""
+    },
+    "thanks": {
+        "thanks_people": "",
+        "thanks_text": ""
+    },
+    "chapters": "",
+    "conclusion": {
+        "summary": "",
+        "achievements": "",
+        "difficulties": "",
+        "perspectives": ""
+    },
+    "references": ""
+}

@@ -1,0 +1,28 @@
+# === Données runtime / sensibles (ne jamais versionner) ===
+backend/data.json
+backend/users_data/
+storage/users.json
+storage/*.json
+!storage/*.json.example
+.env
+
+# === Fichiers générés par LaTeX ===
+backend/*.aux
+backend/*.log
+backend/*.toc
+backend/*.out
+backend/*.pdf
+
+# === Cache Python ===
+__pycache__/
+*.pyc
+
+# === Système / éditeur ===
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# === PHP / environnement local ===
+vendor/
