@@ -12,7 +12,7 @@ Générateur assisté de rapports académiques (PFE / mémoires / rapports de st
 
 🎥 **Vidéo de démonstration :**
 
-[![Regarder la démo](screenshots/1Page de connexion.jpeg)](https://drive.google.com/drive/folders/1EufH6-02gw4_3GEB1S_hs9eLjPxSQEAT?usp=sharing)
+[![Regarder la démo](screenshots/1Page_de_connexion.jpeg)](https://drive.google.com/drive/folders/1EufH6-02gw4_3GEB1S_hs9eLjPxSQEAT?usp=sharing)
 
 *(clique sur l'image ci-dessus pour lancer la vidéo)*
 
@@ -24,13 +24,13 @@ Générateur assisté de rapports académiques (PFE / mémoires / rapports de st
 
 ![Page de connexion](screenshots/1Page de connexion.jpeg)
 
-![Étape 1](screenshots/assistant conversationnel exemples/1.jpeg)
-![Étape 2](screenshots/assistant conversationnel exemples/2.jpeg)
-![Étape 3](screenshots/assistant conversationnel exemples/3.jpeg)
-![Étape 4](screenshots/assistant conversationnel exemples/4.jpeg)
-![Étape 5](screenshots/assistant conversationnel exemples/5.jpeg)
-![Étape 6](screenshots/assistant conversationnel exemples/6.jpeg)
-![Étape 7](screenshots/assistant conversationnel exemples/7.jpeg)
+![Étape 1](screenshots/assisonversationnel_exemplestant_c/1.jpeg)
+![Étape 2](screenshots/assistant_conversationnel_exemples/2.jpeg)
+![Étape 3](screenshots/assistant_conversationnel_exemples/3.jpeg)
+![Étape 4](screenshots/assistant_conversationnel_exemples/4.jpeg)
+![Étape 5](screenshots/assistant_conversationnel_exemples/5.jpeg)
+![Étape 6](screenshots/assistant_conversationnel_exemples/6.jpeg)
+![Étape 7](screenshots/assistant_conversationnel_exemples7.jpeg)
 
 ### 📄 Exemple de rapport généré
 
