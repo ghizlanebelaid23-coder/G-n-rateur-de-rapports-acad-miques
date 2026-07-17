@@ -22,15 +22,15 @@ Générateur assisté de rapports académiques (PFE / mémoires / rapports de st
 
 ### Aperçu de l'assistant conversationnel
 
-![Page de connexion](screenshots/1Page de connexion.jpeg)
+![Page de connexion](screenshots/1Page_de_connexion.jpeg)
 
-![Étape 1](screenshots/assisonversationnel_exemplestant_c/1.jpeg)
+![Étape 1](screenshots/assistant_conversationnel_exemples/1.jpeg)
 ![Étape 2](screenshots/assistant_conversationnel_exemples/2.jpeg)
 ![Étape 3](screenshots/assistant_conversationnel_exemples/3.jpeg)
 ![Étape 4](screenshots/assistant_conversationnel_exemples/4.jpeg)
 ![Étape 5](screenshots/assistant_conversationnel_exemples/5.jpeg)
 ![Étape 6](screenshots/assistant_conversationnel_exemples/6.jpeg)
-![Étape 7](screenshots/assistant_conversationnel_exemples7.jpeg)
+![Étape 7](screenshots/assistant_conversationnel_exemples/7.jpeg)
 
 ### 📄 Exemple de rapport généré
 
