@@ -8,7 +8,7 @@ Générateur assisté de rapports académiques (PFE / mémoires / rapports de st
 
 ## 🎬 Démo
 
-🔗 **Lien du site en ligne :** [rapport-generator.onrender.com](#) *
+
 
 🎥 **Vidéo de démonstration :**
 
@@ -60,7 +60,7 @@ Générateur assisté de rapports académiques (PFE / mémoires / rapports de st
 | Authentification | Firebase Auth                  |
 | Génération PDF | Python + LaTeX (`xelatex`/`pdflatex`) |
 | Stockage     | Fichiers JSON                      |
-| Déploiement  | Docker + Render                    |
+| Conteneurisation| Docker (image prête à l'emploi, testée en local)                 |
 
 ---
 
@@ -98,8 +98,7 @@ rapport-generator/
 │   └── js/*.js                    # Moteur de questions (qflow.js) + logique de chaque assistant
 ├── screenshots/                    # Captures d'écran + PDF d'exemple (voir section Démo)
 ├── .env.example                    # Modèle de configuration (clé Firebase)
-├── Dockerfile                      # Image prête à l'emploi (PHP + Python + LaTeX)
-├── render.yaml                     # Déploiement automatique sur Render
+├── Dockerfile                      # Image prête à l'emploi (PHP + Python + LaTeX)                  
 ├── .gitignore
 ├── LICENSE
 └── README.md
@@ -112,13 +111,13 @@ rapport-generator/
 | Variable | Description | Obligatoire |
 |---|---|---|
 | `FIREBASE_API_KEY` | Clé API Web du projet Firebase (Paramètres du projet > Général > Vos applications) | Oui |
-| `PORT` | Port sur lequel Apache écoute (définie automatiquement par Render) | Non (auto) |
+| `PORT` | Port sur lequel Apache écoute (utile seulement si déployé sur une plateforme cloud) | Non (auto) |
 
 - **En local** : copie `.env.example` en `.env` à la racine du projet, puis remplace la valeur par ta vraie clé Firebase. Ce fichier `.env` est ignoré par Git (voir `.gitignore`), il ne sera jamais commité.
   ```bash
   cp .env.example .env
   ```
-- **Sur Render** : définie directement dans le dashboard du service (Environment) — jamais commitée dans le code.
+
 
 ---
 
@@ -128,6 +127,7 @@ rapport-generator/
 - **LaTeX plutôt qu'une librairie PDF classique (ex: FPDF, DomPDF)** : un rapport académique a des exigences typographiques précises (numérotation, table des matières, bibliographie) que LaTeX gère nativement et que les générateurs PDF "HTML → PDF" simulent mal.
 - **Fichiers JSON plutôt qu'une base de données** : pas de base à provisionner pour un projet de cette taille (quelques utilisateurs, pas de requêtes complexes) — voir la Roadmap ci-dessous pour l'évolution prévue si le besoin grandit.
 - **Isolation par dossier (`users_data/{uid}/`)** plutôt qu'un identifiant en base : simple, sans dépendance supplémentaire, et suffisant tant que le volume reste modeste.
+- **Docker plutôt qu'une installation manuelle** : LaTeX et Python sont lourds à installer à la main ; l'image Docker rend le projet testable en une seule commande, sur n'importe quelle machine.
 
 ---
 
@@ -194,22 +194,9 @@ Ouvrir [http://localhost:8080](http://localhost:8080).
 
 ## ☁️ Déploiement en ligne (Render)
 
-Le projet inclut un `Dockerfile` prêt à l'emploi (PHP + Python + LaTeX) et un `render.yaml` pour un déploiement automatique sur [Render](https://render.com) — gratuit, sans carte bancaire.
+Ce projet n'est pas déployé en ligne pour le moment. Les plateformes gratuites testées (Render, Koyeb, Google Cloud Run, Northflank) exigent désormais une carte bancaire à l'inscription, même pour leur offre gratuite — voir la Roadmap ci-dessous pour les pistes envisagées.
+En attendant, le projet **est entièrement testable en local en une poignée de commandes** grâce à Docker (voir ci-dessus), et **une vidéo de démonstration**complète est disponible dans la section Démo en haut de ce document.
 
-**Étapes :**
-
-1. Pousser le projet sur GitHub.
-2. Créer un compte sur [render.com](https://render.com) et cliquer sur **New +** → **Blueprint**.
-3. Connecter le dépôt GitHub `rapport-generator`. Render détecte automatiquement `render.yaml` et le `Dockerfile`.
-4. Render demande la valeur de `FIREBASE_API_KEY` (déclarée dans `render.yaml`) : colle ta clé API Web Firebase.
-5. Cliquer sur **Apply** — le premier build prend 5 à 10 minutes (installation de LaTeX).
-6. Une fois déployé, Render fournit une URL du type `https://rapport-generator.onrender.com`.
-
-**⚠️ À savoir (offre gratuite Render) :**
-- Le service se met en veille après 15 min d'inactivité ; le premier accès après veille prend 30 à 50 secondes à se réveiller.
-- → Avant d'envoyer le lien à quelqu'un (manager, recruteur), ouvre-le toi-même 1 minute avant pour le "réveiller".
-
----
 
 ## 🧩 Architecture multi-utilisateurs
 
